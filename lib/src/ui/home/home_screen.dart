@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../defaults/defaults.dart';
 import '../../theme/app_theme.dart';
 import '../../widgets/container/course_container.dart';
+import 'course_details_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -98,7 +99,20 @@ class _HomeScreenState extends State<HomeScreen> {
                   itemBuilder: (context, index) {
                     return Column(
                       children: [
-                        CourseContainer(data: courses[index]),
+                        GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) {
+                                    return CourseDetailsScreen(
+                                      course: courses[index],
+                                    );
+                                  },
+                                ),
+                              );
+                            },
+                            child: CourseContainer(data: courses[index])),
                         index == courses.length - 1
                             ? Container()
                             : const SizedBox(height: 16),
