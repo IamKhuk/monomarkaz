@@ -40,6 +40,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             text: translate("onBoarding_text_01"),
             controller: _controller,
           ),
+
           GetCardsContent(
             image: 'assets/images/onboarding_02.jpg',
             title: translate("onBoarding_title_02"),
