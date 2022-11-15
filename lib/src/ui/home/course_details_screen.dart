@@ -5,6 +5,8 @@ import 'package:monomarkaz/src/model/course_model.dart';
 import 'package:monomarkaz/src/theme/app_theme.dart';
 import 'dart:io';
 
+import 'package:monomarkaz/src/ui/home/register_screen.dart';
+
 class CourseDetailsScreen extends StatefulWidget {
   final CourseModel course;
 
@@ -219,45 +221,57 @@ class _CourseDetailsScreenState extends State<CourseDetailsScreen> {
                           ),
                         ),
                         const Spacer(),
-                        Container(
-                          height: 56,
-                          width: MediaQuery.of(context).size.width - 48,
-                          margin: EdgeInsets.only(
-                            left: 24,
-                            right: 24,
-                            bottom: Platform.isIOS ? 32 : 24,
-                          ),
-                          decoration: BoxDecoration(
-                            color: AppTheme.blue,
-                            borderRadius: BorderRadius.circular(16),
-                            boxShadow: [
-                              BoxShadow(
-                                offset: const Offset(0, 2),
-                                blurRadius: 20,
-                                spreadRadius: 0,
-                                color: AppTheme.black.withOpacity(0.07),
-                              ),
-                            ],
-                          ),
-                          child: const Center(
-                            child: Text(
-                              "Register",
-                              style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: AppTheme.fontFamily,
-                                color: AppTheme.white,
-                                letterSpacing: 0.5,
-                              ),
-                            ),
-                          ),
-                        ),
                       ],
                     ),
                   ],
                 ),
               ),
               const Spacer(),
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return RegisterScreen(course: widget.course);
+                      },
+                    ),
+                  );
+                },
+                child: Container(
+                  height: 56,
+                  width: MediaQuery.of(context).size.width - 48,
+                  margin: EdgeInsets.only(
+                    left: 24,
+                    right: 24,
+                    bottom: Platform.isIOS ? 32 : 24,
+                  ),
+                  decoration: BoxDecoration(
+                    color: AppTheme.blue,
+                    borderRadius: BorderRadius.circular(16),
+                    boxShadow: [
+                      BoxShadow(
+                        offset: const Offset(0, 2),
+                        blurRadius: 20,
+                        spreadRadius: 0,
+                        color: AppTheme.black.withOpacity(0.07),
+                      ),
+                    ],
+                  ),
+                  child: const Center(
+                    child: Text(
+                      "Register",
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: AppTheme.fontFamily,
+                        color: AppTheme.white,
+                        letterSpacing: 0.5,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ],

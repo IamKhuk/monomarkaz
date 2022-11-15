@@ -12,6 +12,7 @@ class AppTheme{
   static const Color baseColor = Color(0xFFEBEBF4);
   static const Color gray = Color(0xFF8D989D);
   static const Color highlightColor = Color(0xFFF4F4F4);
+  static const Color lightTwo = Color(0xFFE8EDF0);
 
 
   /// Fonts
