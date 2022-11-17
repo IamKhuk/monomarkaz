@@ -33,6 +33,7 @@ class _CourseDetailsScreenState extends State<CourseDetailsScreen> {
             children: [
               SizedBox(
                 height: 252,
+                width:MediaQuery.of(context).size.width,
                 child: Image.asset(
                   widget.course.image,
                   fit: BoxFit.cover,
@@ -42,17 +43,14 @@ class _CourseDetailsScreenState extends State<CourseDetailsScreen> {
           ),
           Column(
             children: [
-              const SizedBox(height: 220),
               Expanded(
                 child: ListView(
                   shrinkWrap: true,
-                  padding: EdgeInsets.zero,
+                  padding: const EdgeInsets.only(top:220),
                   children: [
                     Container(
                       padding: const EdgeInsets.only(
                         top: 28,
-                        left: 24,
-                        right: 24,
                         bottom: 92,
                       ),
                       decoration: const BoxDecoration(
@@ -66,19 +64,25 @@ class _CourseDetailsScreenState extends State<CourseDetailsScreen> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          Text(
-                            widget.course.name,
-                            style: const TextStyle(
-                              fontWeight: FontWeight.w600,
-                              fontFamily: AppTheme.fontFamily,
-                              fontSize: 18,
-                              color: AppTheme.black,
-                              letterSpacing: 0.5,
-                            ),
+                          Row(
+                            children: [
+                              const SizedBox(width: 24),
+                              Text(
+                                widget.course.name,
+                                style: const TextStyle(
+                                  fontWeight: FontWeight.w600,
+                                  fontFamily: AppTheme.fontFamily,
+                                  fontSize: 18,
+                                  color: AppTheme.black,
+                                  letterSpacing: 0.5,
+                                ),
+                              ),
+                            ],
                           ),
                           const SizedBox(height: 20),
                           Row(
                             children: [
+                              const SizedBox(width: 24),
                               Expanded(
                                 child: Text(
                                   widget.course.text,
@@ -92,6 +96,7 @@ class _CourseDetailsScreenState extends State<CourseDetailsScreen> {
                                   overflow: TextOverflow.ellipsis,
                                 ),
                               ),
+                              const SizedBox(width: 24),
                             ],
                           ),
                           Row(
@@ -124,18 +129,24 @@ class _CourseDetailsScreenState extends State<CourseDetailsScreen> {
                                   ),
                                 ),
                               ),
+                              const SizedBox(width: 24),
                             ],
                           ),
                           const SizedBox(height: 20),
-                          const Text(
-                            "Images",
-                            style: TextStyle(
-                              fontSize: 14,
-                              fontFamily: AppTheme.fontFamily,
-                              fontWeight: FontWeight.bold,
-                              color: AppTheme.black,
-                              letterSpacing: 0.5,
-                            ),
+                          Row(
+                            children: const [
+                              SizedBox(width: 24),
+                              Text(
+                                "Images",
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: AppTheme.fontFamily,
+                                  fontWeight: FontWeight.bold,
+                                  color: AppTheme.black,
+                                  letterSpacing: 0.5,
+                                ),
+                              ),
+                            ],
                           ),
                           const SizedBox(height: 12),
                           SizedBox(
@@ -143,7 +154,7 @@ class _CourseDetailsScreenState extends State<CourseDetailsScreen> {
                             child: ListView.builder(
                               itemCount: widget.course.images.length,
                               scrollDirection: Axis.horizontal,
-                              padding: const EdgeInsets.only(right: 8),
+                              padding: const EdgeInsets.only(left: 24,right: 24),
                               itemBuilder: (context, index) {
                                 return Row(
                                   children: [

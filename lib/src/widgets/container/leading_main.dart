@@ -12,14 +12,14 @@ class LeadingBack extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8),
       child: InkWell(
-        borderRadius: BorderRadius.circular(44),
+        borderRadius: BorderRadius.circular(40),
         onTap: () {
           Navigator.pop(context);
         },
         child: Container(
           color: Colors.transparent,
-          height: 44,
-          width: 44,
+          height: 40,
+          width: 40,
           child: Center(
             child: SvgPicture.asset(
               'assets/icons/left.svg',
