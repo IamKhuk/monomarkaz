@@ -2,10 +2,10 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_translate/flutter_translate.dart';
+import 'package:monomarkaz/src/ui/menu/main_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../theme/app_theme.dart';
-import '../menu/home/home_screen.dart';
 
 class GetCardsContent extends StatelessWidget {
   final String image, title, text;
@@ -124,7 +124,7 @@ class GetCardsContent extends StatelessWidget {
                           Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const HomeScreen(),
+                              builder: (context) => const MainScreen(),
                             ),
                           );
                         } else if (controller.page == 0) {

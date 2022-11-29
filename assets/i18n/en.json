@@ -9,5 +9,8 @@
   "get_started": "Get Started",
   "view_all": "View All",
   "ok": "OK",
-  "cancel": "Cancel"
+  "cancel": "Cancel",
+  "course": {
+    "our_courses": "Our Courses"
+  }
 }

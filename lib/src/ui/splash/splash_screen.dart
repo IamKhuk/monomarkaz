@@ -2,9 +2,9 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_translate/flutter_translate.dart';
+import 'package:monomarkaz/src/ui/menu/main_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../theme/app_theme.dart';
-import '../menu/home/home_screen.dart';
 import 'onboarding_screen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -128,7 +128,7 @@ class _SplashScreenState extends State<SplashScreen>
             builder: (context) {
               return isFirst == true
                   ? const OnBoardingScreen()
-                  : const HomeScreen();
+                  : const MainScreen();
             },
           ),
         );
