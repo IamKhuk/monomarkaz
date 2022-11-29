@@ -61,9 +61,9 @@ class CourseContainer extends StatelessWidget {
           Text(
             data.text,
             style: const TextStyle(
-              fontWeight: FontWeight.w600,
+              fontWeight: FontWeight.normal,
               fontFamily: AppTheme.fontFamily,
-              fontSize: 16,
+              fontSize: 12,
               color: AppTheme.black,
               letterSpacing: 0.5,
             ),

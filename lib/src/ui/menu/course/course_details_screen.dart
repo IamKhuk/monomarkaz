@@ -4,8 +4,7 @@ import 'package:flutter_translate/flutter_translate.dart';
 import 'package:monomarkaz/src/model/course_model.dart';
 import 'package:monomarkaz/src/theme/app_theme.dart';
 import 'dart:io';
-
-import 'package:monomarkaz/src/ui/home/register_screen.dart';
+import '../../auth/register_screen.dart';
 
 class CourseDetailsScreen extends StatefulWidget {
   final CourseModel course;

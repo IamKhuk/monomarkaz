@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:monomarkaz/src/ui/home/map_screen.dart';
-
-import '../../defaults/defaults.dart';
-import '../../theme/app_theme.dart';
-import '../../widgets/container/course_container.dart';
-import 'course_details_screen.dart';
+import '../../../defaults/defaults.dart';
+import '../../../theme/app_theme.dart';
+import '../../../widgets/container/course_container.dart';
+import '../course/course_details_screen.dart';
+import 'map_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);

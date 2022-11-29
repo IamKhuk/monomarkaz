@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
-import '../../theme/app_theme.dart';
-import '../../widgets/map_style/map_style.dart';
+import '../../../theme/app_theme.dart';
+import '../../../widgets/map_style/map_style.dart';
 
 class MapScreen extends StatefulWidget {
   const MapScreen({super.key});
@@ -19,7 +19,7 @@ class _MapScreenState extends State<MapScreen> {
 
   @override
   void initState() {
-    location = const LatLng(39.671955947318516, 66.86260436667285);
+    location = const LatLng(39.67155409660035, 66.8625679426472);
     super.initState();
   }
 
